@@ -58,7 +58,7 @@ app.get('/doctor/*', checkuser.doctor);
 app.get('/doctor/*', checkuser.patient);
 
 app.get('/',(req,res)=>{
-  res.send("welcome to server plage");
+  res.send("welcome to server page");
 })
 
 
