@@ -63,7 +63,7 @@ app.get('/',(req,res)=>{
 
 
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 6001;
+const port = process.env.PORT || 5000;
 mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.MONGO_URL, {
@@ -72,6 +72,6 @@ mongoose
   })
   .then(() => {
     console.log('DataBase Connection sucessfull....')
-    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+    app.listen(port, () => console.log(`Server Port: ${port}`));
   })
   .catch((error) => console.log(`${error} did not connect`));
