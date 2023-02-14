@@ -27,7 +27,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ limit: "100kb", extended: true }));
 app.use(bodyParser.json({ limit: "100kb", extended: true }));
-app.use(cors());
+app.use(cors({origin:"*"}));
 app.use(cookieParser());
 
 
